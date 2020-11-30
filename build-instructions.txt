@@ -1,0 +1,21 @@
+# Building the containers and running the challenge code
+
+1. From this directory, build the containers using the following command:
+>> docker-compose up -d
+
+It could take a little bit, depending on your system but that should be everything you need to do. Once its completed, you can exec into the container and run the tests or the code itself.
+
+2. Execute into the container and install dependencies, database migrations, etc.
+>> docker exec -it app ./bootstrap/build.sh
+
+3. Execute into the container with the following command:
+>> docker exec -it app bash
+
+4. Now that its running and installed, you can access it in your browser at:
+
+http://localhost/api/members-activated/3
+
+
+5. The bulk of the code used for solving this challenge is located in:
+
+src/routes/api.php
